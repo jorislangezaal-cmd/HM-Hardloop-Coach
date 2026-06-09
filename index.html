@@ -8,16 +8,16 @@
 <meta name="apple-mobile-web-app-title" content="HM Coach">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0f172a">
-<title>HM Coach 6.0</title>
+<title>HM Coach 7.3</title>
 <style>
 :root{--bg:#eef2f7;--card:#fff;--text:#111827;--muted:#64748b;--line:#e5e7eb;--green:#10b981;--blue:#2563eb;--orange:#f59e0b;--red:#ef4444;--purple:#7c3aed;--cyan:#06b6d4}
 @media(prefers-color-scheme:dark){:root{--bg:#08111f;--card:#101827;--text:#f8fafc;--muted:#94a3b8;--line:#243044}}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:14px 14px 96px;max-width:1040px;margin-inline:auto}
-.hero{background:linear-gradient(135deg,#0f172a,#2563eb 52%,#7c3aed);color:white;border-radius:30px;padding:22px;margin:4px 0 12px;box-shadow:0 14px 34px rgba(37,99,235,.28)}
-h1{font-size:31px;line-height:1;margin:0 0 8px}h2{margin:0 0 12px}.sub{opacity:.86;font-size:14px;line-height:1.4}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:16px}.metric{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:12px;min-height:72px}.metric span{font-size:12px;opacity:.82}.metric b{font-size:21px;display:block;margin-top:4px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 4px 18px rgba(15,23,42,.05)}.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.muted{color:var(--muted);font-size:14px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:12px 12px 96px;max-width:620px;margin-inline:auto}
+.hero{background:linear-gradient(135deg,#0f172a,#2563eb 52%,#7c3aed);color:white;border-radius:28px;padding:20px;margin:4px 0 12px;box-shadow:0 14px 34px rgba(37,99,235,.28)}
+h1{font-size:34px;line-height:1;margin:0}h2{margin:0 0 12px}.sub{opacity:.86;font-size:14px;line-height:1.4}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:16px}.metric{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:12px;min-height:72px}.metric span{font-size:12px;opacity:.82}.metric b{font-size:21px;display:block;margin-top:4px}.metric small{display:block;font-size:11px;opacity:.8;margin-top:-2px}.heroMetrics .raceMetric{background:rgba(16,185,129,.18);border-color:rgba(16,185,129,.28)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:15px;margin:10px 0;box-shadow:0 4px 18px rgba(15,23,42,.05)}.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.muted{color:var(--muted);font-size:14px}
 .bar{height:14px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:10px}.fill{height:100%;width:0;background:var(--green);transition:.25s}.fill.orange{background:var(--orange)}.fill.red{background:var(--red)}
 .nav{display:flex;gap:8px;overflow:auto;position:sticky;top:0;z-index:20;background:linear-gradient(var(--bg) 80%,transparent);padding:8px 0}.nav button{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 13px;font-weight:800}.nav button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
 .weekHead{display:flex;justify-content:space-between;align-items:center;gap:10px}.weekHead h2{font-size:22px}.badge{color:#fff;background:var(--blue);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.Basis{background:var(--blue)}.Specifiek{background:var(--purple)}.Herstel{background:var(--green)}.Raceweek{background:var(--red)}
@@ -29,18 +29,17 @@ h1{font-size:31px;line-height:1;margin:0 0 8px}h2{margin:0 0 12px}.sub{opacity:.
 .loggrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:14px;background:transparent;color:var(--text);padding:11px;font:inherit}textarea{min-height:72px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini,.zone{border:1px solid var(--line);border-radius:18px;padding:13px;background:var(--card)}.mini b,.zone b{display:block;font-size:20px}
 .pacePreview,.coachBox{margin-top:10px;padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(37,99,235,.08);font-weight:900}.goodbox{background:rgba(16,185,129,.12)!important;border-color:rgba(16,185,129,.35)!important}.warnbox{background:rgba(245,158,11,.14)!important;border-color:rgba(245,158,11,.38)!important}.badbox{background:rgba(239,68,68,.12)!important;border-color:rgba(239,68,68,.35)!important}.helpbox{margin-top:10px;padding:11px;border-radius:15px;border:1px solid var(--line);background:rgba(100,116,139,.08);font-size:14px;line-height:1.45}.analysisText{font-size:13px;line-height:1.35;color:var(--muted);margin-top:4px}
-.danger{color:var(--red);font-weight:900}.good{color:var(--green);font-weight:900}.warn{color:var(--orange);font-weight:900}.cyan{color:var(--cyan);font-weight:900}.suggestion{margin-top:10px;padding:12px;border-radius:16px;border:1px solid rgba(6,182,212,.35);background:rgba(6,182,212,.10);line-height:1.45}.scoreBig{font-size:32px;font-weight:950}
+.danger{color:var(--red);font-weight:900}.good{color:var(--green);font-weight:900}.warn{color:var(--orange);font-weight:900}.cyan{color:var(--cyan);font-weight:900}.suggestion,.explainBox{margin-top:10px;padding:12px;border-radius:16px;border:1px solid rgba(6,182,212,.35);background:rgba(6,182,212,.10);line-height:1.45}.explainBox{font-size:14px;color:var(--muted)}.scoreBig{font-size:32px;font-weight:950}
 canvas{width:100%;height:180px;border:1px solid var(--line);border-radius:16px;background:rgba(100,116,139,.05)}
-.tools{position:fixed;left:0;right:0;bottom:0;background:rgba(120,120,120,.18);backdrop-filter:blur(18px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}.tools button{flex:1;max-width:220px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:14px;padding:12px 10px;font-weight:900}.tools button.active{background:var(--blue);color:#fff;border-color:var(--blue)}.coachStatus{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:8px 10px;font-size:13px;font-weight:900;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.38)}.coachStatus.active{background:rgba(16,185,129,.13);border-color:rgba(16,185,129,.38)}.hidden{display:none}
+.tools{position:fixed;left:0;right:0;bottom:0;background:rgba(120,120,120,.18);backdrop-filter:blur(18px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}.tools button{flex:1;max-width:220px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:14px;padding:12px 10px;font-weight:900}.tools button.active{background:var(--blue);color:#fff;border-color:var(--blue)}.coachStatus{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:8px 10px;font-size:13px;font-weight:900;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.38)}.coachStatus.active{background:rgba(16,185,129,.13);border-color:rgba(16,185,129,.38)}.hidden{display:none}.readiness button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:14px;padding:10px 12px;font-weight:900}.readiness button.active{background:var(--blue);color:#fff;border-color:var(--blue)}.trackerStats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.routeCanvas{width:100%;height:240px;border:1px solid var(--line);border-radius:18px;background:rgba(100,116,139,.07)}
 table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}th{color:var(--muted)}
-@media(max-width:430px){.metrics{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:span 2}.loggrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+@media(max-width:430px){body{padding-left:10px;padding-right:10px}.metrics{grid-template-columns:1fr 1fr}.heroMetrics .raceMetric{grid-column:span 2;order:3}.loggrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.nav button{padding:9px 11px}.tools button{font-size:13px}}
 </style>
 </head>
 <body>
 <section class="hero">
-<h1>HM Coach 6.0</h1>
-<div class="sub">Slimme halve-marathoncoach · met 5 km & 10 km tests · doel 2:10-2:15</div>
-<div class="metrics"><div class="metric"><span>Deze week</span><b id="weekTop">—</b></div><div class="metric"><span>Volgende training</span><b id="nextTop">—</b></div><div class="metric"><span>Voorspelling</span><b id="predictionTop">—</b></div></div>
+<h1>HM Coach</h1>
+<div class="metrics heroMetrics"><div class="metric"><span>Huidige week</span><b id="weekTop">—</b></div><div class="metric raceMetric"><span>Tot 8 november</span><b id="daysTop">—</b><small>dagen</small></div><div class="metric"><span>HM-voorspelling</span><b id="predictionTop">—</b></div></div>
 </section>
 <nav class="nav"><button id="tab-dashboard" class="active" onclick="tab('dashboard')">Dashboard</button><button id="tab-plan" onclick="tab('plan')">Schema</button><button id="tab-now" onclick="tab('now')">Deze week</button><button id="tab-log" onclick="tab('log')">Log</button><button id="tab-coach" onclick="tab('coach')">Coach</button><button id="tab-stats" onclick="tab('stats')">Stats</button><button id="tab-info" onclick="tab('info')">Info</button></nav>
 
@@ -49,10 +48,11 @@ table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px
 
 <main id="dashboard">
 <section class="card"><h2>Coachdashboard</h2><div id="dashboardAdvice" class="coachBox"></div></section>
-<section class="card"><h2>Vandaag / volgende training</h2><div id="nextWorkout"></div></section>
-<section class="card"><h2>Belasting & herstel</h2><div class="grid"><div class="mini"><b id="loadScore">—</b><span class="muted">trainingsbelasting 7 dagen</span></div><div class="mini"><b id="recoveryScore">—</b><span class="muted">herstelscore</span></div></div><div class="bar"><div class="fill" id="loadFill"></div></div><p class="muted" id="loadText"></p></section>
-<section class="card"><h2>Fitness & trend</h2><div class="grid"><div class="mini"><b id="fitnessScore">—</b><span class="muted">fitness score</span></div><div class="mini"><b id="trendText">—</b><span class="muted">Zone 2-trend</span></div></div><div id="volumeSuggestion" class="suggestion"></div></section>
-<section class="card"><h2>Zone 2-progressie</h2><canvas id="z2canvas" width="700" height="240"></canvas><p class="muted">Gebaseerd op rustige/long runs met hartslag ≤148 bpm.</p></section>
+<section class="card"><h2>Hoe voel je je vandaag?</h2><div class="actions readiness"><button onclick="setReadiness('fris',this)">😀 Fris</button><button onclick="setReadiness('normaal',this)">🙂 Normaal</button><button onclick="setReadiness('vermoeid',this)">😐 Vermoeide benen</button><button onclick="setReadiness('erg-vermoeid',this)">😕 Erg vermoeid</button><button onclick="setReadiness('pijn',this)">🤕 Pijn/blessure</button></div><div id="readinessAdvice" class="coachBox"></div></section>
+<section class="card"><h2>Volgende training</h2><div id="nextWorkout"></div></section>
+<section class="card"><h2>Belasting & herstel</h2><div class="grid"><div class="mini"><b id="loadScore">—</b><span class="muted">trainingsbelasting 7 dagen</span></div><div class="mini"><b id="recoveryScore">—</b><span class="muted">herstelscore</span></div></div><div class="bar"><div class="fill" id="loadFill"></div></div><p class="muted" id="loadText"></p><div class="explainBox"><b>Wat betekent dit?</b><br>Belasting kijkt naar hoeveel km je de laatste 7 dagen hebt gelopen ten opzichte van je geplande week, plus extra punten voor hoge hartslag, zwaar gevoel, tempo/race-trainingen en vermoeidheid. Herstel is de kleur: groen = prima, oranje = opletten, rood = rustiger aan.</div></section>
+<section class="card"><h2>Fitness & trend</h2><div class="grid"><div class="mini"><b id="fitnessScore">—</b><span class="muted">fitness score</span></div><div class="mini"><b id="trendText">—</b><span class="muted">Zone 2-trend</span></div></div><div id="volumeSuggestion" class="suggestion"></div><div class="explainBox"><b>Wat meet dit?</b><br>Fitness score is een indicatie op basis van consistentie, langste duurloop, Zone 2-tempo en test/tempo-data. Trend vergelijkt je rustige Zone 2-tempo’s: als je bij lage hartslag sneller loopt, gaat je trend omhoog.</div></section>
+<section class="card"><h2>Zone 2-progressie</h2><canvas id="z2canvas" width="700" height="240"></canvas><p class="muted">Gebaseerd op rustige/long runs met hartslag ≤148 bpm.</p><div class="explainBox"><b>Wanneer telt een training mee?</b><br>Alleen trainingen met type <b>Rustig</b>, <b>Lange duurloop</b> of <b>Herstel</b> tellen mee, én alleen als je afstand, tijd en gemiddelde hartslag invult. De gemiddelde hartslag moet maximaal 148 bpm zijn. Je ziet de grafiek vanaf minimaal 2 geldige Zone 2-trainingen.</div></section>
 </main>
 
 <main id="plan" class="hidden"></main>
@@ -63,13 +63,14 @@ table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px
 <select id="logType" onchange="updatePacePreview()"><option value="easy">Rustig</option><option value="steady">Steady</option><option value="tempo">Tempo</option><option value="hm">HM-tempo</option><option value="long">Lange duurloop</option><option value="recovery">Herstel</option><option value="race">Race/test</option></select>
 <input id="logDate" type="date"><input id="logKm" type="number" step="0.1" placeholder="afstand km" oninput="updatePacePreview()"><input id="logTime" placeholder="tijd bv 37:30" oninput="updatePacePreview()">
 <input id="logHr" type="number" placeholder="gem. hartslag" oninput="updatePacePreview()"><select id="logRpe" onchange="updatePacePreview()"><option value="">gevoel 1-10</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
-<select id="logRecovery"><option value="">herstel na training</option><option value="fris">🟢 fris</option><option value="normaal">🟡 normaal</option><option value="vermoeid">🔴 vermoeid</option></select>
+<select id="logRecovery"><option value="">na afloop: hoe voel je je?</option><option value="fris">🟢 goed / fris</option><option value="normaal">🟡 normale vermoeidheid</option><option value="vermoeid">🔴 erg vermoeid / zware benen</option><option value="pijn">🤕 pijn of blessureklachten</option></select>
 </div>
 <div id="typeHelp" class="helpbox"></div>
 <div id="pacePreview" class="pacePreview">Vul afstand en tijd in om je gemiddelde tempo te zien.</div>
 <textarea id="logNote" placeholder="Notities: route, weer, Apple Watch opmerkingen..."></textarea><div class="actions"><button class="smallbtn" onclick="addLog()">Opslaan & tempo aanpassen</button><button class="smallbtn cancel" onclick="clearLogForm()">Annuleer wijziging</button></div></section>
 <section class="card"><h2>Logboek</h2><div id="logTable"></div></section>
 </main>
+
 
 <main id="coach" class="hidden">
 <section class="card"><h2>Coach advies</h2><div id="coachAdvice"></div></section>
@@ -85,9 +86,9 @@ table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px
 </main>
 
 <main id="info" class="hidden">
-<section class="card"><h2>Wat is nieuw in 5.4?</h2><p class="muted">Versie 6.0 voegt coach-intelligence toe: fitness score, trendanalyse, suggesties voor lange-duurloopvolume en 5 km/10 km testmomenten voor betere voorspellingen.</p></section>
+
 <section class="card"><h2>Hartslagzones</h2><div class="grid"><div class="zone"><b>Zone 1</b>96-115 bpm<br><span class="muted">herstel</span></div><div class="zone"><b>Zone 2</b>115-145 bpm<br><span class="muted">duurvermogen</span></div><div class="zone"><b>Zone 3</b>145-163 bpm<br><span class="muted">steady</span></div><div class="zone"><b>Zone 4</b>163-177 bpm<br><span class="muted">tempo</span></div></div></section>
-<section class="card"><h2>Data</h2><button class="smallbtn ghost" onclick="exportData()">Exporteer data</button> <button class="smallbtn ghost" onclick="resetAll()">Reset vinkjes</button></section>
+<section class="card"><h2>Data back-up</h2><p class="muted">Gebruik export vóór updates. De export verschijnt hieronder zodat je hem kunt kopiëren of downloaden.</p><div class="actions"><button class="smallbtn ghost" onclick="exportData()">Maak export</button><button class="smallbtn ghost" onclick="downloadExport()">Download back-up</button><button class="smallbtn ghost" onclick="resetAll()">Reset vinkjes</button></div><textarea id="exportBox" placeholder="Je export verschijnt hier na klikken op Maak export..." readonly></textarea><p class="muted">Import: plak je back-up hieronder en klik op importeren.</p><textarea id="importBox" placeholder="Plak hier je geëxporteerde data..."></textarea><div class="actions"><button class="smallbtn" onclick="importData()">Importeer data</button><button class="smallbtn ghost" onclick="importBox.value=''">Leeg importveld</button></div></section>
 </main>
 
 <div class="tools"><button id="bottom-now" onclick="tab('now')">Deze week</button><button id="bottom-finish" onclick="finishNext()">Afronden</button><button id="bottom-dashboard" onclick="tab('dashboard')">Dashboard</button></div>
@@ -106,18 +107,25 @@ function logs(){return JSON.parse(localStorage.getItem('hm4-logs')||'[]')} funct
 function k(w,i){return `hm4-w${w}-t${i}`} function nkey(w){return `hm4-note-${w}`}
 function currentWeek(){return Math.min(22,Math.max(1,Math.floor((new Date()-startDate)/(7*24*3600*1000))+1))}
 function currentWeekObj(){return weeks[currentWeek()-1]}
+function daysToRace(){return Math.max(0,Math.ceil((raceDate-new Date())/(24*3600*1000)))}
 function trainingDayLabel(i){return i===0?'Dinsdag':i===1?'Donderdag':'Zaterdag/Zondag'}
-function nextTrainingDate(index){
+function nextTrainingDateObj(index){
  let now=new Date();
  let targets=index===0?[2]:index===1?[4]:[6,0]; // dinsdag, donderdag, weekend
- let best=null, bestAdd=99;
+ let bestAdd=99;
  for(const target of targets){
    let add=(target-now.getDay()+7)%7;
    if(add===0 && now.getHours()>=20)add=7;
-   if(add<bestAdd){bestAdd=add;best=target}
+   if(add<bestAdd)bestAdd=add;
  }
  let d=new Date(now); d.setHours(7,0,0,0); d.setDate(now.getDate()+bestAdd);
- return d.toLocaleDateString('nl-NL',{weekday:'short',day:'numeric',month:'short'});
+ return {date:d,days:bestAdd};
+}
+function nextTrainingDate(index){
+ let obj=nextTrainingDateObj(index);
+ if(obj.days===0)return 'Vandaag';
+ if(obj.days===1)return 'Morgen';
+ return obj.date.toLocaleDateString('nl-NL',{weekday:'short',day:'numeric',month:'short'});
 }
 function plannedDayText(week,index){return trainingDayLabel(index)+' · '+nextTrainingDate(index)}
 function nextPlanned(){
@@ -215,7 +223,7 @@ function clearLogForm(){logTitle.textContent='Training loggen';logKm.value=logTi
 function addLog(){let x=logs();let item={type:logType.value,date:logDate.value||new Date().toISOString().slice(0,10),km:+logKm.value||0,time:logTime.value,hr:+logHr.value||0,rpe:logRpe.value,recovery:logRecovery.value,note:logNote.value,planned:plannedContext};item.analysis=trainingAnalysis(item); if(editingLogIndex!==null){x[editingLogIndex]=item}else{x.unshift(item)} setLogs(x); if(plannedContext)localStorage.setItem(k(plannedContext.week,plannedContext.index),'1'); clearLogForm();renderPlan();tab('coach')}
 function editLog(i){let r=logs()[i];editingLogIndex=i;plannedContext=r.planned||null;logTitle.textContent='Training wijzigen';logType.value=r.type||'easy';logDate.value=r.date||new Date().toISOString().slice(0,10);logKm.value=r.km||'';logTime.value=r.time||'';logHr.value=r.hr||'';logRpe.value=r.rpe||'';logRecovery.value=r.recovery||'';logNote.value=r.note||'';document.querySelector('#log .smallbtn').textContent='Wijziging opslaan';updatePacePreview();tab('log')}
 function deleteLog(i){if(!confirm('Deze gelogde training verwijderen?'))return;let x=logs();x.splice(i,1);setLogs(x);renderPlan();tab('log')}
-function update(){let done=0,km=0,total=weeks.length*3;weeks.forEach(w=>w.trainings.forEach((t,i)=>{if(localStorage.getItem(k(w.week,i))==='1'){done++;km+=t.km}}));let pct=Math.round(done/total*100);fill.style.width=pct+'%';doneText.textContent=`${done} van ${total} trainingen · ${Math.round(km)} km gepland voltooid`;let n=nextPlanned();weekTop.textContent='Week '+currentWeek();nextTop.textContent=trainingDayLabel(n.index);predictionTop.textContent=coachReady()?predText(model().predSec):'—';renderCoachStatus();renderCoach();renderLogs();renderStats();renderDashboard();drawZ2();}
+function update(){let done=0,km=0,total=weeks.length*3;weeks.forEach(w=>w.trainings.forEach((t,i)=>{if(localStorage.getItem(k(w.week,i))==='1'){done++;km+=t.km}}));let pct=Math.round(done/total*100);fill.style.width=pct+'%';doneText.textContent=`${done} van ${total} trainingen · ${Math.round(km)} km gepland voltooid`;let n=nextPlanned();weekTop.textContent='Week '+currentWeek();daysTop.textContent=daysToRace();predictionTop.textContent=coachReady()?predText(model().predSec):'—';renderCoachStatus();renderCoach();renderLogs();renderStats();renderDashboard();drawZ2();}
 function renderCoachStatus(){let count=logs().filter(r=>r.km>0&&parseTime(r.time)>0).length;let ready=coachReady();coachStatus.className='coachStatus '+(ready?'active':'');coachStatus.textContent=ready?'✅ Persoonlijke tempo’s actief':'⏳ Nog onvoldoende data';coachStatusText.textContent=ready?`Gebaseerd op ${count} gelogde trainingen. Tempo’s kunnen nu zichtbaar afwijken van het basisschema.`:`${count} van 3 trainingen gelogd. Tot die tijd gebruikt de app het basisschema.`}
 function renderDashboard(){let n=nextPlanned();nextWorkout.innerHTML=`<div class="wtitle">${trainingDayLabel(n.index)} · Week ${n.week} · ${n.t.label}: ${n.t.name}</div><div class="details">Geplande dag: ${plannedDayText(n.week,n.index)}<br>Tempo: ${recFor(n.t.type)}<br>Hartslag: ${hrFor(n.t.type)}<br><span class="fuel">Voeding: ${fuelFor(n.t.type,n.t.km)}</span></div><div class="actions"><button class="finish" onclick="finishWorkout(${n.week},${n.index})">Deze training afronden</button></div>`;let load=trainingLoad();loadScore.textContent=load.score+'/100';loadFill.style.width=Math.min(100,load.score)+'%';loadFill.className='fill '+(load.score>=90?'red':load.score>=70?'orange':'');recoveryScore.innerHTML=load.recovery;loadText.textContent=`Laatste 7 dagen: ${load.km.toFixed(1)} km van ongeveer ${load.planned.toFixed(1)} km gepland. Groen <70, oranje 70-89, rood 90+.`;fitnessScore.textContent=fitnessScoreCalc()+'/100';let tr=trendCalc();trendText.textContent=tr.label;volumeSuggestion.textContent=longRunSuggestion();dashboardAdvice.innerHTML=virtualCoach(load)}
 function plannedWeekKm(){
@@ -326,10 +334,158 @@ function drawZ2(){
  ctx.fillText(first.date.slice(5),left,c.height-24);
  ctx.fillText(last.date.slice(5),left+w-36,c.height-24);
 }
-function exportData(){let obj={logs:logs(),prs:{pr1:localStorage.getItem('hm4-pr1'),pr5:localStorage.getItem('hm4-pr5'),pr10:localStorage.getItem('hm4-pr10'),prHm:localStorage.getItem('hm4-prHm')}};navigator.clipboard?.writeText(JSON.stringify(obj,null,2));alert('Data gekopieerd naar klembord')}
+
+function setReadiness(value,btn){
+ localStorage.setItem('hm4-readiness',value);
+ document.querySelectorAll('.readiness button').forEach(b=>b.classList.remove('active'));
+ if(btn)btn.classList.add('active');
+ let msg='';
+ if(value==='fris')msg='<span class="good">Je bent fris.</span> Training kan zoals gepland.';
+ if(value==='normaal')msg='Prima. Doe de training volgens schema en houd rustige trainingen echt rustig.';
+ if(value==='vermoeid')msg='<span class="warn">Vermoeide benen.</span> Loop vandaag rustiger en blijf laag in Zone 2.';
+ if(value==='erg-vermoeid')msg='<span class="warn">Erg vermoeid.</span> Maak er een hersteltraining van of neem rust.';
+ if(value==='pijn')msg='<span class="danger">Pijn/blessure.</span> Niet forceren. Kies rust of wandelen; bij aanhoudende pijn: professional raadplegen.';
+ readinessAdvice.innerHTML=msg;
+}
+function restoreReadiness(){
+ let v=localStorage.getItem('hm4-readiness')||'';
+ if(!v){readinessAdvice.textContent='Kies vóór je training hoe je je voelt. De coach past het advies daarop aan.';return}
+ setReadiness(v,null);
+ document.querySelectorAll('.readiness button').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes(`'${v}'`))b.classList.add('active')});
+}
+
+let watchId=null,trackPoints=[],trackStart=0,trackTimer=null;
+function haversine(a,b){
+ const R=6371e3, toRad=x=>x*Math.PI/180;
+ const dLat=toRad(b.lat-a.lat), dLon=toRad(b.lon-a.lon);
+ const lat1=toRad(a.lat), lat2=toRad(b.lat);
+ const s=Math.sin(dLat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dLon/2)**2;
+ return 2*R*Math.asin(Math.sqrt(s));
+}
+function trackDistance(){
+ let m=0; for(let i=1;i<trackPoints.length;i++)m+=haversine(trackPoints[i-1],trackPoints[i]); return m;
+}
+function fmtTime(sec){sec=Math.floor(sec);let h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),s=sec%60;return h?`${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${m}:${String(s).padStart(2,'0')}`}
+function updateTrackerUI(){
+ let elapsed=trackStart?(Date.now()-trackStart)/1000:0, km=trackDistance()/1000;
+ trackTime.textContent=fmtTime(elapsed); trackKm.textContent=km.toFixed(2);
+ trackPace.textContent=km>0.05?secToPace(elapsed/km):'—';
+ drawRoute();
+}
+function startTracking(){
+ if(!navigator.geolocation){trackStatus.textContent='GPS wordt niet ondersteund in deze browser.';return}
+ trackPoints=[]; trackStart=Date.now(); updateTrackerUI();
+ trackStatus.textContent='GPS gestart. Wacht op locatie...';
+ watchId=navigator.geolocation.watchPosition(pos=>{
+   let p={lat:pos.coords.latitude,lon:pos.coords.longitude,t:Date.now(),acc:pos.coords.accuracy};
+   if(!trackPoints.length || haversine(trackPoints[trackPoints.length-1],p)>5)trackPoints.push(p);
+   trackStatus.textContent=`GPS actief · punten: ${trackPoints.length} · nauwkeurigheid ±${Math.round(p.acc)}m`;
+   updateTrackerUI();
+ },err=>{trackStatus.textContent='GPS-fout: '+err.message},{enableHighAccuracy:true,maximumAge:1000,timeout:10000});
+ clearInterval(trackTimer); trackTimer=setInterval(updateTrackerUI,1000);
+}
+function stopTracking(){
+ if(watchId!==null)navigator.geolocation.clearWatch(watchId);
+ watchId=null; clearInterval(trackTimer); trackTimer=null;
+ trackStatus.textContent='GPS gestopt. Je kunt de training nu opslaan in het logboek.';
+ updateTrackerUI();
+}
+function saveTrackedRun(){
+ let km=trackDistance()/1000, elapsed=trackStart?(Date.now()-trackStart)/1000:0;
+ if(km<0.05||elapsed<30){alert('Te weinig GPS-data om op te slaan.');return}
+ logType.value='easy'; logDate.value=new Date().toISOString().slice(0,10); logKm.value=km.toFixed(2); logTime.value=fmtTime(elapsed);
+ logNote.value='GPS-training via HM Coach'; localStorage.setItem('hm4-last-route',JSON.stringify(trackPoints));
+ stopTracking(); updatePacePreview(); tab('log'); lastRouteInfo.textContent=`Laatste route: ${km.toFixed(2)} km in ${fmtTime(elapsed)}.`;
+}
+function drawRoute(){
+ let c=document.getElementById('routeCanvas'); if(!c)return;
+ let ctx=c.getContext('2d'); ctx.clearRect(0,0,c.width,c.height);
+ ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--muted'); ctx.font='15px -apple-system';
+ if(trackPoints.length<2){ctx.fillText('Route verschijnt zodra er minimaal 2 GPS-punten zijn.',24,160);return}
+ let xs=trackPoints.map(p=>p.lon), ys=trackPoints.map(p=>p.lat), minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
+ let pad=28, w=c.width-pad*2,h=c.height-pad*2;
+ function X(lon){return pad+(lon-minX)/(maxX-minX||1)*w}
+ function Y(lat){return c.height-pad-(lat-minY)/(maxY-minY||1)*h}
+ ctx.strokeStyle='#2563eb'; ctx.lineWidth=5; ctx.beginPath();
+ trackPoints.forEach((p,i)=>{i?ctx.lineTo(X(p.lon),Y(p.lat)):ctx.moveTo(X(p.lon),Y(p.lat))}); ctx.stroke();
+ ctx.fillStyle='#10b981'; ctx.beginPath(); ctx.arc(X(trackPoints[0].lon),Y(trackPoints[0].lat),7,0,Math.PI*2); ctx.fill();
+ ctx.fillStyle='#ef4444'; let last=trackPoints[trackPoints.length-1]; ctx.beginPath(); ctx.arc(X(last.lon),Y(last.lat),7,0,Math.PI*2); ctx.fill();
+}
+
+function buildExport(){
+ let obj={
+   version:'HM Coach 7.3',
+   exportedAt:new Date().toISOString(),
+   logs:logs(),
+   prs:{
+     pr1:localStorage.getItem('hm4-pr1')||'',
+     pr5:localStorage.getItem('hm4-pr5')||'',
+     pr10:localStorage.getItem('hm4-pr10')||'',
+     prHm:localStorage.getItem('hm4-prHm')||''
+   },
+   notes:{},
+   checkboxes:{}
+ };
+ weeks.forEach(w=>{
+   obj.notes[w.week]=localStorage.getItem(nkey(w.week))||'';
+   w.trainings.forEach((_,i)=>obj.checkboxes[k(w.week,i)]=localStorage.getItem(k(w.week,i))||'');
+ });
+ return JSON.stringify(obj,null,2);
+}
+function exportData(){
+ const text=buildExport();
+ exportBox.value=text;
+ exportBox.focus();
+ exportBox.select();
+ try{document.execCommand('copy')}catch(e){}
+ if(navigator.clipboard){
+   navigator.clipboard.writeText(text).then(()=>alert('Export gemaakt en gekopieerd. Bewaar hem in Notities of download een back-up.')).catch(()=>alert('Export gemaakt. Kopieer de tekst handmatig uit het exportvak.'));
+ }else{
+   alert('Export gemaakt. Kopieer de tekst handmatig uit het exportvak.');
+ }
+}
+function downloadExport(){
+ const text=exportBox.value.trim()||buildExport();
+ exportBox.value=text;
+ const blob=new Blob([text],{type:'application/json'});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');
+ a.href=url;
+ a.download='hm-coach-backup.json';
+ document.body.appendChild(a);
+ a.click();
+ document.body.removeChild(a);
+ URL.revokeObjectURL(url);
+}
+function importData(){
+ let raw=importBox.value.trim();
+ if(!raw){alert('Plak eerst je export-data in het veld.');return}
+ let obj;
+ try{obj=JSON.parse(raw)}catch(e){alert('Import mislukt: dit is geen geldige JSON/export.');return}
+ if(!confirm('Weet je zeker dat je deze data wilt importeren? Bestaande logs/PR’s kunnen worden overschreven.'))return;
+ if(Array.isArray(obj.logs))setLogs(obj.logs);
+ if(obj.prs){
+   ['pr1','pr5','pr10','prHm'].forEach(id=>{
+     if(obj.prs[id]!==undefined && obj.prs[id]!==null)localStorage.setItem('hm4-'+id,obj.prs[id]);
+   });
+ }
+ if(obj.notes){
+   Object.keys(obj.notes).forEach(w=>localStorage.setItem('hm4-note-'+w,obj.notes[w]||''));
+ }
+ if(obj.checkboxes){
+   Object.keys(obj.checkboxes).forEach(key=>{
+     if(obj.checkboxes[key])localStorage.setItem(key,obj.checkboxes[key]);
+     else localStorage.removeItem(key);
+   });
+ }
+ importBox.value='';
+ renderPlan();
+ update();
+ alert('Import gelukt. Je data is teruggezet.');
+}
 function resetAll(){if(!confirm('Alle vinkjes wissen?'))return;weeks.forEach(w=>w.trainings.forEach((_,i)=>localStorage.removeItem(k(w.week,i))));renderPlan()}
 function setBottomActive(name){['bottom-now','bottom-dashboard','bottom-finish'].forEach(id=>{let el=document.getElementById(id);if(el)el.classList.remove('active')}); if(name==='now'){let bottomNow=document.getElementById('bottom-now'); if(bottomNow)bottomNow.classList.add('active')} if(name==='dashboard'){let bottomDash=document.getElementById('bottom-dashboard'); if(bottomDash)bottomDash.classList.add('active')}}
 function tab(name){['dashboard','plan','now','log','coach','stats','info'].forEach(x=>{document.getElementById(x).classList.toggle('hidden',x!==name);let b=document.getElementById('tab-'+x);if(b)b.classList.toggle('active',x===name)});setBottomActive(name);window.scrollTo({top:0,behavior:'smooth'});}
-renderPlan(); logDate.value=new Date().toISOString().slice(0,10); updatePacePreview(); update();
+renderPlan(); logDate.value=new Date().toISOString().slice(0,10); updatePacePreview(); restoreReadiness(); update();
 </script>
 </body></html>
